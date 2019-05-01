@@ -15,11 +15,11 @@ $(document).ready(function () {
                      $('#domain').text('Domain:   '+ data[0].domain);
                      $('#logo').attr('src' ,data[0].logo );
                      $('<br>').appendTo('#result')
-                     $('<button>').attr({type:click  , id:save}).appendTo('#result').text('Save').on('click', function(){
+                     $('<button>').text('Save').attr('type','click').appendTo('#result').on('click', function(){
                          SavedCompany.push(data);
                          localStorage.setItem('SavedCompany', JSON.stringify(SavedCompany));
                          renderSavedCompany();
-                         //$('#save').hide() ;
+                         
                      });
                      
             
